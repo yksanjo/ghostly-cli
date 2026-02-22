@@ -1,60 +1,84 @@
-# Ghostly CLI
+# ghostly-cli
 
-> Standalone CLI for terminal memory - better shell integration.
+## Detailed Description
 
-Part of the Ghostly Memory Bank ecosystem - lightweight CLI with JSON storage.
+ghostly-cli is maintained as an industry-grade software project with production-ready engineering practices.  
+This repository includes documented setup, quality gates, operational guidance, and governance standards so contributors can safely build, test, and ship changes with confidence.
 
-## Install
+## Problem Statement
+
+Describe the user or business problem this project solves, the target users, and expected outcomes.
+
+## Solution Overview
+
+Summarize the architecture, core modules, and runtime behavior at a high level.
+
+## Key Features
+
+- Clear project scope and intended use.
+- Reproducible local development workflow.
+- Test coverage and CI quality gates.
+- Security and contribution policies.
+- Deployment-ready repository structure.
+
+## Repository Structure
+
+```text
+.
+|-- src/                  # Core implementation
+|-- tests/                # Automated test suites
+|-- docs/                 # Design notes and operational docs
+|-- .github/workflows/    # CI pipelines
+|-- README.md
+|-- LICENSE
+|-- CONTRIBUTING.md
+|-- SECURITY.md
+|-- CODE_OF_CONDUCT.md
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Git
+- Project runtime/toolchain for this repo
+
+### Local Setup
 
 ```bash
-npm install -g ghostly-cli
-# Or run directly with npx
+npm ci
+npm run lint
+npm test
+npm run build
 ```
 
 ## Usage
 
-```bash
-# Initialize
-ghostly init
+Document primary commands, API routes, CLI examples, or UI workflows here.
 
-# Capture a command
-ghostly capture "npm run build" --stderr "Error" --exit-code 1
+## Quality Standards
 
-# Search memories
-ghostly search "npm"
+- CI must pass before merge.
+- Changes require tests for critical behavior.
+- Security-sensitive changes should include risk notes.
+- Keep pull requests focused and reviewable.
 
-# View stats
-ghostly stats
+## Security
 
-# Interactive mode
-ghostly interactive
-```
+See `SECURITY.md` for responsible disclosure and handling guidelines.
 
-## Features
+## Contributing
 
-- Lightweight JSON storage (~/.ghostly/memory.json)
-- Error detection and auto-suggestions
-- Git branch awareness
-- Project-based memory organization
-- Interactive mode with inquirer
+See `CONTRIBUTING.md` for branching, commit, and pull request expectations.
 
-## Commands
+## Roadmap
 
-- `ghostly init` - Initialize storage
-- `ghostly capture <cmd>` - Capture command
-- `ghostly search <query>` - Search memories
-- `ghostly stats` - Show statistics
-- `ghostly interactive` - Interactive mode
+Track upcoming milestones, technical debt, and planned feature work.
 
-## Shell Integration
+## Support
 
-Add to your `.bashrc` or `.zshrc`:
-
-```bash
-# Auto-capture failed commands
-alias gho="ghostly capture"
-```
+Open a GitHub issue for bugs, feature requests, or documentation gaps.
 
 ## License
 
-MIT
+This project is released under the MIT License.
